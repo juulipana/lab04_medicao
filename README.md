@@ -81,6 +81,8 @@ Realizar uma análise empírica sobre a Dívida Técnica Auto-Admitida (SATD) em
 
 ## Metodologia 
 
+<img width="688" height="230" alt="image" src="https://github.com/user-attachments/assets/f4bec7bd-3198-4cb7-a644-666ccd0e93a9" />
+
 ### 1. Coleta de Dados
 - Seleção de **3.600 notebooks de competições do Kaggle**.  
 - Três domínios de Machine Learning:
