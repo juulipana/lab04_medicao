@@ -110,7 +110,8 @@ Realizar uma análise empírica sobre a Dívida Técnica Auto-Admitida (SATD) em
 
 ---
 
-## Conclusões
-<!-- TO-DO: Inserir observações, padrões encontrados e sugestões para trabalhos futuros -->
+## Conclusão Parcial
+
+Os dados coletados nos mostram que as dívidas técnicas mais comuns nos notebooks do Kaggle estão ligadas a **Data Dependency** e **Awareness**, ou seja, problemas com os dados e anotações de melhorias futuras. Também aparecem bastante **Readability** e **Performance**. Já itens como **Scalability** e **Duplicate Code Elimination** quase não aparecem, mostrando que esses pontos são menos lembrados pelos autores.
 
 ---
