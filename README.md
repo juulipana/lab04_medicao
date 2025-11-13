@@ -4,22 +4,6 @@ Este laboratório é dedicado ao estudo e uso de **ferramentas de Business Intel
 
 ---
 
-## Índice 
-
-1. [Introdução](#introdução)
-2. [Objetivos](#objetivos)
-   2.1. [Perguntas de Pesquisa (RQs)](#perguntas-de-pesquisa-rqs)
-   2.2. [Métricas de Análise](#métricas-de-análise)
-3. [Contexto do Kaggle](#contexto-do-kaggle)
-4. [Metodologia](#metodologia)
-   4.1. [Coleta de Dados](#1-coleta-de-dados)
-   4.2. [Identificação de SATD](#2-identificação-de-satd)
-   4.3. [Classificação de SATD](#3-classificação-de-satd)
-   4.4. [Métricas e Análise de Dados](#4-métricas-e-análise-de-dados)
-5. [Conclusões](#conclusões)
-
----
-
 ## Introdução
 
 **Dívida técnica** é o custo implícito associado à adoção de soluções rápidas, porém menos ideais, no desenvolvimento de software — em detrimento de abordagens mais robustas e sustentáveis a longo prazo.  
