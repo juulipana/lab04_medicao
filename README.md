@@ -45,37 +45,60 @@ Ele oferece um ambiente colaborativo com diversas ferramentas, tais como:
 
 ---
 
-## Objetivos
+## Objetivo
 
-Realizar uma análise empírica sobre a Dívida Técnica Auto-Admitida (SATD) em sistemas de Machine Learning, através da classificação manual em larga escala de comentários de código de notebooks do Kaggle, a fim de criar uma taxonomia de seus tipos, localização e causas.
+O objetivo geral deste estudo é **realizar uma análise empírica em larga escala sobre Dívida Técnica Auto-Admitida (SATD)** em notebooks de competições do **Kaggle**, buscando entender suas **características, causas e impactos nas práticas de desenvolvimento de Machine Learning**.
+
+Para isso, seguimos a definição de SATD proposta por **Potdar e Shihab (2014)** para identificar ocorrências de dívida técnica em comentários de código e aplicamos a **taxonomia de nove categorias de O’Brien et al. (2022)**, apresentada no estudo *“23 Shades of Self-Admitted Technical Debt: An Empirical Study on Machine Learning Software”*.
 
 ---
 
 ### Perguntas de Pesquisa (RQs)
 
-| **ID** | **Pergunta de Pesquisa** |
-|--------|---------------------------|
-| **RQ1** | Quais são as categorias mais prevalentes de SATD em notebooks de competição de ML no Kaggle? |
-| **RQ2** | Como a prevalência e o tipo de SATD se correlacionam com as métricas de sucesso (prêmios) e visibilidade (upvotes) de um notebook? |
-| **RQ3** | Como a distribuição das categorias de SATD varia entre os diferentes domínios de competição (ex: Tabular, NLP, Visão Computacional)? |
-| **RQ4** | Em que medida o domínio da competição modera a relação entre a SATD e o sucesso do notebook? |
+| **ID**  | **Pergunta de Pesquisa**                                                                                                                                |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **RQ1** | Quais são as categorias mais frequentes e prevalentes de Dívida Técnica Auto-Admitida (SATD) em notebooks de competições de Machine Learning no Kaggle? |
+| **RQ2** | Como a prevalência e o tipo de SATD se correlacionam com métricas de sucesso (medalhas) e visibilidade (upvotes) dos notebooks?                         |
+| **RQ3** | Como a distribuição das categorias de SATD varia entre os diferentes domínios de competição (ex: Tabular, NLP e Visão Computacional)?                   |
 
 ---
 
-###  Métricas de Análise
+### Métricas e Análise de Dados
 
-| **RQ** | **Métrica** | **Descrição** |
-|--------|--------------|----------------|
-| **RQ1** | **M1.1** | Distribuição percentual das categorias de SATD (ex: Dívida de Código, Dívida de Teste, Dívida de Modelo). |
-|  | **M1.2** | Densidade de SATD por categoria (instâncias de SATD por notebook). |
-| **RQ2** | **M2.1** | Densidade de SATD em relação à classificação na competição e quantidade de upvotes. |
-|  | **M2.2** | Correlação entre quantidade/tipo de SATD e medalhas (Ouro, Prata, Bronze). |
-|  | **M2.3** | Correlação entre quantidade/tipo de SATD e número de votos ("upvotes"). |
-| **RQ3** | **M3.1** | Densidade média de SATD por domínio (Tabular, NLP, CV). |
-|  | **M3.2** | Comparação percentual das categorias de SATD entre domínios. |
-|  | **M3.3** | Densidade média de SATD por notebook dentro de cada domínio. |
-| **RQ4** | **M4.1** | Análise de moderação do domínio na relação entre tipo/quantidade de SATD e medalhas. |
-|  | **M4.2** | Análise de moderação do domínio na relação entre tipo/quantidade de SATD e número de votos. |
+| **RQ**  | **Métrica** | **Descrição**                                                                                               |
+| ------- | ----------- | ----------------------------------------------------------------------------------------------------------- |
+| **RQ1** | **M1.1**    | Distribuição relativa de cada categoria de SATD em todos os notebooks.                                      |
+|         | **M1.2**    | Densidade geral de SATD por notebook (número de ocorrências de SATD normalizado pelo total de comentários). |
+| **RQ2** | **M2.1**    | Correlação entre densidade/tipo de SATD e posição no *leaderboard*.                                         |
+|         | **M2.2**    | Correlação entre densidade/tipo de SATD e obtenção de medalhas (Ouro, Prata, Bronze).                       |
+|         | **M2.3**    | Correlação entre densidade/tipo de SATD e métricas de visibilidade (número de upvotes).                     |
+| **RQ3** | **M3.1**    | Comparação da densidade média de SATD entre os domínios (Tabular, NLP e Visão Computacional).               |
+|         | **M3.2**    | Distribuição percentual das categorias de SATD em cada domínio.                                             |
+|         | **M3.3**    | Análise comparativa de padrões de SATD característicos de cada tipo de tarefa ou modalidade de dados.       |
+
+---
+
+## Tipos de Dívida Técnica Auto-Admitida (SATD)
+
+Com base na taxonomia apresentada no estudo **“23 Shades of Self-Admitted Technical Debt: An Empirical Study on Machine Learning Software” (O’Brien et al., 2022)**, esta pesquisa adota uma classificação específica para sistemas de *Machine Learning*.
+Os autores analisaram mais de **2.600 repositórios** e identificaram **23 tipos distintos de SATD**, organizados em **nove grandes categorias**, que representam as principais dimensões da dívida técnica em software de aprendizado de máquina.
+
+Abaixo estão as nove categorias consideradas neste estudo:
+
+| **Categoria**                     | **Descrição**                                                                   |
+| --------------------------------- | ------------------------------------------------------------------------------- |
+| **1. Data Dependency**            | Dívidas relacionadas ao processamento, armazenamento e configuração de dados.   |
+| **2. Code Dependency**            | Dívidas causadas por dependências externas, como bibliotecas ou módulos.        |
+| **3. Awareness**                  | Lacunas de conhecimento ou incertezas sobre algoritmos e decisões de design.    |
+| **4. Modularity**                 | Falta de separação entre componentes ou ausência de abstrações no código de ML. |
+| **5. Configurable Options**       | Configurações incompletas ou rígidas de hiperparâmetros e modelos.              |
+| **6. Scalability**                | Dívidas associadas a código experimental, protótipos ou não otimizados.         |
+| **7. Readability**                | Problemas de clareza e manutenção do código.                                    |
+| **8. Performance**                | Implementações ineficientes que afetam o tempo de execução e o uso de recursos. |
+| **9. Duplicate Code Elimination** | Códigos redundantes ou repetidos que precisam de refatoração.                   |
+
+Essa taxonomia é um grande passo para **contextualizar a SATD no cenário do aprendizado de máquina**, permitindo analisar não só dívidas tradicionais de software, mas também **novos tipos de dívida** que emergem do uso de dados, modelos e experimentos.
+Por sua relevância e estrutura hierárquica, ela serve como **base para a categorização adotada nesta pesquisa**.
 
 ---
 
