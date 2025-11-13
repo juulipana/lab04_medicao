@@ -16,8 +16,7 @@ Este laboratório é dedicado ao estudo e uso de **ferramentas de Business Intel
    4.2. [Identificação de SATD](#2-identificação-de-satd)
    4.3. [Classificação de SATD](#3-classificação-de-satd)
    4.4. [Métricas e Análise de Dados](#4-métricas-e-análise-de-dados)
-5. [Visualizações e Resultados](#visualizações-e-resultados)
-6. [Conclusões](#conclusões)
+5. [Conclusões](#conclusões)
 
 ---
 
@@ -106,25 +105,6 @@ Realizar uma análise empírica sobre a Dívida Técnica Auto-Admitida (SATD) em
 - Divisão em **4 lotes JSON** (TODO, HACK, WORKAROUND, FIXME).  
 - Classificação segundo as **9 categorias de SATD** definidas por **Bhatia et al. (2023)**.  
 - Resultados registrados em **Google Sheets** para revisão e validação manual.
-
----
-
-### 4. Métricas e Análise de Dados
-Análise guiada por **3 Questões de Pesquisa (RQs):**
-
-#### RQ1 — Frequência e Distribuição
-- Percentual de cada categoria de SATD.  
-- Densidade de SATD por notebook.
-
-#### RQ2 — Correlação com Sucesso e Visibilidade
-- Relação entre densidade de SATD e:
-  - Posição no *leaderboard*  
-  - Medalhas (Ouro, Prata, Bronze)  
-  - Upvotes dos notebooks
-
-#### RQ3 — Variação por Domínio
-- Densidade média de SATD em Tabular, NLP e CV.  
-- Comparação de categorias entre domínios.
 
 ---
 
