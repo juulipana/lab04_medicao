@@ -4,11 +4,18 @@ Este laboratório é dedicado ao estudo e uso de **ferramentas de Business Intel
 
 ---
 
-## Índice
+## Índice 
+
 1. [Introdução](#introdução)
 2. [Objetivos](#objetivos)
+   2.1. [Perguntas de Pesquisa (RQs)](#perguntas-de-pesquisa-rqs)
+   2.2. [Métricas de Análise](#métricas-de-análise)
 3. [Contexto do Kaggle](#contexto-do-kaggle)
 4. [Metodologia](#metodologia)
+   4.1. [Coleta de Dados](#1-coleta-de-dados)
+   4.2. [Identificação de SATD](#2-identificação-de-satd)
+   4.3. [Classificação de SATD](#3-classificação-de-satd)
+   4.4. [Métricas e Análise de Dados](#4-métricas-e-análise-de-dados)
 5. [Visualizações e Resultados](#visualizações-e-resultados)
 6. [Conclusões](#conclusões)
 
@@ -41,8 +48,35 @@ Ele oferece um ambiente colaborativo com diversas ferramentas, tais como:
 
 ## Objetivos
 
-- Realizar uma **análise empírica em larga escala** sobre a Dívida Técnica Autoassumida (SATD) em notebooks de competições do Kaggle.  
-- Compreender **suas características, causas e impactos** nas práticas de desenvolvimento em Machine Learning.
+Realizar uma análise empírica sobre a Dívida Técnica Auto-Admitida (SATD) em sistemas de Machine Learning, através da classificação manual em larga escala de comentários de código de notebooks do Kaggle, a fim de criar uma taxonomia de seus tipos, localização e causas.
+
+---
+
+### Perguntas de Pesquisa (RQs)
+
+| **ID** | **Pergunta de Pesquisa** |
+|--------|---------------------------|
+| **RQ1** | Quais são as categorias mais prevalentes de SATD em notebooks de competição de ML no Kaggle? |
+| **RQ2** | Como a prevalência e o tipo de SATD se correlacionam com as métricas de sucesso (prêmios) e visibilidade (upvotes) de um notebook? |
+| **RQ3** | Como a distribuição das categorias de SATD varia entre os diferentes domínios de competição (ex: Tabular, NLP, Visão Computacional)? |
+| **RQ4** | Em que medida o domínio da competição modera a relação entre a SATD e o sucesso do notebook? |
+
+---
+
+###  Métricas de Análise
+
+| **RQ** | **Métrica** | **Descrição** |
+|--------|--------------|----------------|
+| **RQ1** | **M1.1** | Distribuição percentual das categorias de SATD (ex: Dívida de Código, Dívida de Teste, Dívida de Modelo). |
+|  | **M1.2** | Densidade de SATD por categoria (instâncias de SATD por notebook). |
+| **RQ2** | **M2.1** | Densidade de SATD em relação à classificação na competição e quantidade de upvotes. |
+|  | **M2.2** | Correlação entre quantidade/tipo de SATD e medalhas (Ouro, Prata, Bronze). |
+|  | **M2.3** | Correlação entre quantidade/tipo de SATD e número de votos ("upvotes"). |
+| **RQ3** | **M3.1** | Densidade média de SATD por domínio (Tabular, NLP, CV). |
+|  | **M3.2** | Comparação percentual das categorias de SATD entre domínios. |
+|  | **M3.3** | Densidade média de SATD por notebook dentro de cada domínio. |
+| **RQ4** | **M4.1** | Análise de moderação do domínio na relação entre tipo/quantidade de SATD e medalhas. |
+|  | **M4.2** | Análise de moderação do domínio na relação entre tipo/quantidade de SATD e número de votos. |
 
 ---
 
@@ -91,11 +125,6 @@ Análise guiada por **3 Questões de Pesquisa (RQs):**
 #### RQ3 — Variação por Domínio
 - Densidade média de SATD em Tabular, NLP e CV.  
 - Comparação de categorias entre domínios.
-
----
-
-## Visualizações e Resultados
-<!-- TO-DO: Inserir gráficos, dashboards e análises visuais obtidas através da ferramenta de BI -->
 
 ---
 
